@@ -1,0 +1,6 @@
+<h1>Chat</h1>
+
+<div class="card-body bg-success rounded">
+  <app-message *ngFor="let msg of listMsgs | async" [oMessage]="msg">
+  </app-message>
+</div>
