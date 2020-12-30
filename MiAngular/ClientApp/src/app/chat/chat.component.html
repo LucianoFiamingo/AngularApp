@@ -1,4 +1,8 @@
 <h1>Chat</h1>
+<input type="text" [formControl]="nameControl"/>
+<input type="text" [formControl]="textControl"/>
+
+<input type="button" (click)="SendMessage()" value="Enviar" />
 
 <div class="card-body bg-success rounded">
   <app-message *ngFor="let msg of listMsgs | async" [oMessage]="msg">
