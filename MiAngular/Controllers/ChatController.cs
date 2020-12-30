@@ -22,7 +22,6 @@ namespace MiAngular.Controllers
         public IEnumerable<MessageVM> Message()
         {
             List<MessageVM> listMsgs = (from msg in dBContext.Message
-                                        orderby msg.Id descending
                                         select new MessageVM
                                         {
                                             Id = msg.Id,

@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,5 +19,6 @@ namespace MiAngular.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Text { get; set; }
+
     }
 }
