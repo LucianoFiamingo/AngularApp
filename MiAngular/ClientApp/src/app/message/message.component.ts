@@ -1,20 +1,16 @@
-import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Message } from '../Intefaces';
 
 @Component({
   selector: 'app-message',
-  templateUrl: './message.component.html'
+  templateUrl: './message.component.html',
+  styleUrls: ['./message.component.css']
 })
 
 export class MessageComponent {
   @Input() oMessage: Message;
-  @ViewChild('msg', null) msg: ElementRef;
 
   constructor() {
-    //this.Iniciar();
   }
 
-  public Iniciar() {
-    this.msg.nativeElement.setAttribute("style", "color:orange");
-  }
 }

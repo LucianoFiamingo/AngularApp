@@ -1,8 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace MiAngular.Models
 {
@@ -10,9 +6,8 @@ namespace MiAngular.Models
     {
         public MyDBContext(DbContextOptions<MyDBContext> options) : base(options)
         {
-
         }
-        public DbSet<Message> Message{get;set;}
+        public DbSet<Message> Message { get; set; }
     }
     public class Message
     {
@@ -20,5 +15,10 @@ namespace MiAngular.Models
         public string Name { get; set; }
         public string Text { get; set; }
 
+    }
+    public class User
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

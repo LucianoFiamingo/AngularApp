@@ -1,10 +1,18 @@
-<p #msg class="mensaje px-4 border border-success rounded-lg">
-  {{oMessage.name}}:
-  {{oMessage.text}}
-</p>
+<div *ngIf="oMessage.name == 'Mario'"
+     class="d-flex align-items-end flex-column">
 
-<style>
-  .mensaje{
-    width: 75%;
-  }
-</style>
+  <div #msg class="w-75 d-inline-flex flex-row-reverse p-0 my-2 ">
+      <p class="p-2 m-0 bg-success rounded-lg px-3">
+        {{oMessage.text}}
+      </p>
+  </div>
+</div>
+
+<div *ngIf="oMessage.name != 'Mario'">
+
+  <div #msg class="w-75 p-0 my-2">
+      <p class="p-2 m-0 bg-primary rounded-lg d-inline-flex pr-5">
+        {{oMessage.text}}
+      </p>
+  </div>
+</div>

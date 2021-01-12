@@ -13,7 +13,6 @@ const httpOptions = {
 @Injectable({ providedIn: 'root' })
 export class ChatService {
 
-  public algo: string = "Soy un servicio";
   baseUrl: string;
 
   constructor(protected http: HttpClient, @Inject("BASE_URL") baseUrl: string) {

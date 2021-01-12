@@ -3,6 +3,10 @@ export interface Message {
   Name: string,
   Text: string;
 }
+export interface User {
+  Id: number,
+  Name: string;
+}
 export interface MyResponse {
   Success: number,
   Message: string,

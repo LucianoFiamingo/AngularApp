@@ -1,11 +1,27 @@
-<h1>Chat</h1>
+<section class="jumbotron">
+  <h1>Chat de {{user.name}}</h1>
+  <h6 class="my-4">
+    A continuación puede ver los mensajes de
 
-<div #chatDiv id="chat" style="white-space: pre-line" class="chat border p-3 rounded-lg">
-  <app-message *ngFor="let msg of listMsgs | async" [oMessage]="msg">
-  </app-message>
-</div>
+    <app-user>
+    </app-user>
 
-<input type="text" [formControl]="nameControl" class="form-control my-4" />
-<textarea #text id="msgInput" type="text" rows='1' [formControl]="textControl" (keydown)="Escribiendo($event)" class="form-control my-4"></textarea>
+  </h6>
+  
+  <div #chatDiv id="chat" class="chat border p-3 rounded-lg">
+    <app-message *ngFor="let msg of listMsgs | async" [oMessage]="msg">
+    </app-message>
+  </div>
+ 
+  <form action="/" method="post" (submit)="sendMessage()">
 
-<input type="button" (click)="SendMessage()" value="Enviar" class="btn btn-primary mb-4" />
+    <input type="text" class="form-control my-4" [formControl]="nameControl" value="Mario" />
+
+    <textarea #text id="msgInput" type="text" rows='1' [formControl]="textControl"
+              (keydown)="writting($event)" class="form-control my-4"
+              placeholder="escriba su mensaje"></textarea>
+
+    <button type="submit" class="btn btn-primary mb-4">Enviar</button>
+
+  </form>
+</section>

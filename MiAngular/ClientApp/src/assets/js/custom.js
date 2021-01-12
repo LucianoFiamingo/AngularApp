@@ -1,3 +1,4 @@
+/*
 function cargaJSFile() {
   updateScroll(); 
 }
@@ -22,4 +23,4 @@ function updateScroll() {
   element.scrollTop = element.scrollHeight;
 }
 
-
+*/
